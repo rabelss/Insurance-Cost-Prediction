@@ -1,38 +1,52 @@
 # Insurance Cost Prediction
 
-Bu proje, sigorta verileri üzerinde **masraf (cost) tahmini** yapmak için Python ve makine öğrenmesi (Linear Regression) kullanır. Çalışma; veri hazırlama, görselleştirme, model eğitimi ve metriklerle değerlendirme adımlarını içerir.
+Bu proje, Python kullanarak sigorta maliyetlerini makine öğrenmesi yöntemiyle tahmin etmeyi amaçlamaktadır. Çalışmada veri analizi, veri ön işleme, model geliştirme ve performans değerlendirme adımları uygulanmıştır. Proje Linear Regression algoritması kullanılarak gerçekleştirilmiştir.
 
-## İçerik
-- **Jupyter Notebook**: `Insurance-Cost-Prediction.ipynb`
-- (Varsa) **Veri**: `insurance.csv`
-- **Gereksinimler**: `requirements.txt`
+---
 
-## Kullanılan Teknolojiler
-- Python (Pandas, NumPy)
-- Görselleştirme (Matplotlib, Seaborn)
-- Makine Öğrenmesi (scikit-learn)
-- Jupyter Notebook
+## 🔧 Kullanılan Teknolojiler
 
-## Adımlar (Notebook İçeriği)
-1. **Veri Yükleme & İnceleme**: Eksik değer, tip, özet istatistikler
-2. **Veri Hazırlama**: Kategorik değişkenlerin dönüştürülmesi, gerekirse ölçekleme
-3. **Görselleştirme**: Dağılımlar, korelasyon ısı haritası
-4. **Modelleme**: `train_test_split` + `LinearRegression`
-5. **Değerlendirme**: MAE, MSE, RMSE
+| Teknoloji | Açıklama |
+|-----------|----------|
+| Python | Programlama dili |
+| Pandas, NumPy | Veri işleme |
+| Matplotlib, Seaborn | Veri görselleştirme |
+| Scikit-learn | Makine öğrenmesi |
+| Jupyter Notebook | Geliştirme ortamı |
 
-## Çalıştırma
+---
+
+## 📊 Veri Seti
+
+Projede **sigorta maliyet tahmini** için yaygın olarak kullanılan bir veri seti kullanılmıştır. Veri seti aşağıdaki sütunlardan oluşur:
+
+| Sütun | Açıklama |
+|--------|----------|
+| age | Yaş |
+| sex | Cinsiyet |
+| bmi | Vücut kitle indeksi |
+| children | Çocuk sayısı |
+| smoker | Sigara kullanımı |
+| region | Bölge |
+| charges | Sigorta maliyeti (hedef değişken) |
+
+---
+
+## 🚀 Proje Adımları
+
+1. **Veri Keşfi ve Analizi (EDA)**
+2. **Eksik ve aykırı değer kontrolü**
+3. **Kategorik verilerin dönüştürülmesi (One-Hot Encoding)**
+4. **Veri setinin eğitim ve test olarak ayrılması**
+5. **Linear Regression modeli ile eğitim**
+6. **Model performans değerlendirmesi (MAE, MSE, RMSE)**
+
+---
+
+## 📦 Kurulum
+
+Projeyi çalıştırmak için aşağıdaki adımları izleyin:
+
+### 1. Gerekli kütüphaneleri yükleyin
 ```bash
 pip install -r requirements.txt
-jupyter notebook
-# Notebook içinde sırasıyla hücreleri çalıştırın
-
-
-## requirements.txt
-```bash
-cat > requirements.txt << 'EOF'
-numpy
-pandas
-matplotlib
-seaborn
-scikit-learn
-jupyter
